@@ -37,4 +37,4 @@ Replace Blue Area
    ↓
 Combine Background + Live Frame
    ↓
-✨ Invisibility Effect
+ Invisibility Effect
