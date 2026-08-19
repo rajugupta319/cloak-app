@@ -1,8 +1,6 @@
-# 🪄 Invisibility Cloak — Real-Time Computer Vision
+# Invisibility Cloak — Real-Time Computer Vision
 
-## ✨ What is this?
-
-Ever wondered what it would look like to wear an invisibility cloak?
+##  What is this?
 
 This project recreates that effect using **real-time computer vision**.
 
@@ -10,11 +8,11 @@ The program first captures the background, then detects the **blue color** of th
 
 The result is a simple Harry Potter-style invisibility effect — created using Python and OpenCV.
 
-**No green screen. No Photoshop. Just computer vision.**
+**No green screen. No Photoshop. Only computer vision.**
 
 <br>
 
-## 🎥 How It Works
+##  How It Works
 
 The project follows this simple pipeline:
 
