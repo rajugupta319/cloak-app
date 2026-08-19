@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import streamlit as st
-from streamlit_webrtc import webrtc_streamer
+from streamlit_webrtc import webrtc_streamer, RTCConfiguration
 import av
 
 st.title("Blue Invisibility Cloak")
@@ -45,5 +45,15 @@ class CloakProcessor:
         # Convert back to web frame
         return av.VideoFrame.from_ndarray(final_output, format="bgr24")
 
-# Start the webcam stream
-webrtc_streamer(key="invisibility-cloak", video_processor_factory=CloakProcessor)
+# Set up the STUN server to bypass cloud firewalls
+RTC_CONFIGURATION = RTCConfiguration(
+    {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+)
+
+# Start the webcam stream with the new configuration
+webrtc_streamer(
+    key="invisibility-cloak", 
+    video_processor_factory=CloakProcessor,
+    rtc_configuration=RTC_CONFIGURATION,
+    media_stream_constraints={"video": True, "audio": False}
+)
